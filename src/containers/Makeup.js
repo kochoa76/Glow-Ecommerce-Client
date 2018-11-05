@@ -1,16 +1,18 @@
-import React from 'react'
+import React, {Component} from 'react'
 import './Makeup.css'
-const Makeup = (props) => (
-  <div>
-    <h1>Makeup </h1>
-    {props.makeup.map(makeup =>
-      <div key={makeup.id} className="MakeUpCard">
-      <h2><strong> {makeup.name}</strong></h2>
-      <p> Price: ${makeup.price}</p>
-      <img className="MakeupImage" src={makeup.img_url} alt={makeup.name}/>
-      <p> Description: {makeup.description} </p>
-      </div>
-    )}
-  </div>
-)
+import MakeupCard from '../components/MakeupCard'
+import MakeupForm from '../containers/MakeupForm'
+class Makeup extends Component{
+
+  render() {
+    return (
+    <div className="MakeupContainer">
+      <h1>Makeup </h1>
+      {this.props.makeup.map(makeup => <MakeupCard key={makeup.id} makeup={makeup}/>)}
+
+    <MakeupForm />
+    </div>
+    )
+  }
+}
 export default Makeup
