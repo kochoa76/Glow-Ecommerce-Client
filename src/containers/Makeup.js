@@ -13,7 +13,6 @@ class Makeup extends Component{
 }
 
   render() {
-    console.log(this.props.makeup)
     return (
     <div className="MakeupContainer">
       <h1> Makeup </h1>

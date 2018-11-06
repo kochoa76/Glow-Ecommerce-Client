@@ -1,7 +1,12 @@
 export const updateMakeupFormData = makeupFormData => {
-  debugger;
   return {
     type: 'UPDATED_DATA',
     makeupFormData
+  }
+}
+
+export const resetMakeupForm = () => {
+  return {
+    type: 'RESET_MAKEUP_FORM'
   }
 }
