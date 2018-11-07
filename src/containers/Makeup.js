@@ -4,7 +4,7 @@ import './Makeup.css';
 import MakeupCard from '../components/MakeupCard';
 import MakeupForm from '../containers/MakeupForm';
 import { getMakeup } from '../actions/makeup'
-
+import MakeupNav from '../components/MakeupNav'
 
 class Makeup extends Component{
 
@@ -14,10 +14,15 @@ class Makeup extends Component{
 
   render() {
     return (
-    <div className="MakeupContainer">
-      <h1> Makeup </h1>
-      {this.props.makeup.map(makeup => <MakeupCard key={makeup.id} makeup={makeup}/>  )}
+      
+      <div className="homePage">
+      <div className="MakeupNav">
+        <MakeupNav />
+      </div>
+      <div className="MakeupContainer">
+        {this.props.makeup.map(makeup => <MakeupCard key={makeup.id} makeup={makeup} handleDelete={this.handleDelete}/>  )}
       <MakeupForm />
+    </div>
     </div>
     )
   }

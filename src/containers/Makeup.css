@@ -1,13 +1,75 @@
 
-.MakeupCard {
-  background: whitesmoke;
-  float: left;
+.homePage {
+  font-family: sans-serif;
 }
 
-.MakeupCard:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+.MakeupCard {
+  background: white;
+  padding: 15px;
+  float: left;
+  width: 50%;
+  padding: 20px;
+
 }
 
 .MakeupImage {
-  width: 30%;
+  width: 70%;
 }
+
+.MakeupContainer {
+  padding: 20px;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  height: 30px;
+  font-family: sans-serif;
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+}
+
+ .nav-title {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  font-size: 25px;
+  color: black;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.top-round-rainbow {
+
+  height: 50%; */
+  background: white;
+  border-radius: 4px;
+
+  background-image: repeating-linear-gradient(to right, #c4e17f 50px, #f7fdca 50px, #fad071 50px, #f0766b, #db9dbe, #c49cdf, #6599e2, #61c2e4);
+}
+
+.nav-links {
+  margin: 10px;
+  font-size: 18px;
+  background-color: white;
+  transition: all 0.3s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ .nav-links a {
+  display: inline-block;
+  color: black;
+  padding: 10px;
+  display: flex;
+
+
+}
+
+/* .nav-links a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+} */

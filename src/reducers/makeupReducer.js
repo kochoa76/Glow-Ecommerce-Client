@@ -4,6 +4,9 @@ function makeupReducer(state=[], action) {
       return action.makeup
     case "CREATE_MAKEUP_SUCCESS":
       return state.concat(action.makeup)
+    case "DELETE_MAKEUP_SUCCESS":
+      const makeup = state.makeup.filter(makeup => makeup.id !== action.makeup.id);
+      return {...state, makeup}
       
     default:
     return state;
