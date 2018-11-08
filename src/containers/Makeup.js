@@ -14,12 +14,11 @@ class Makeup extends Component{
 
   render() {
     return (
-
       <div className="homePage">
-      <div id="MakeupContainer">
+      <div className="MakeupContainer">
         {this.props.makeup.map(makeup => <MakeupCard key={makeup.id} makeup={makeup} handleDelete={this.handleDelete}/>  )}
     </div>
-    </div>
+  </div>
     )
   }
 }
