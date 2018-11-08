@@ -29,6 +29,15 @@ export const getMakeup = () => {
   }
 }
 
+// export const getMakeupId= (id) => {
+//   return (dispatch) => {
+//     return fetch(`${API_URL}/makeup/`)
+//     .then(response => response.json())
+//     .then(makeupId => console.log(makeupId))
+//     .catch(error => console.log(error))
+//   }
+// }
+
 export const createMakeup = makeup => {
     return (dispatch) => {
       return fetch(`${API_URL}/makeup`, {

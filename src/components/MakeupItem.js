@@ -1,13 +1,31 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux'
+import { getMakeup } from '../actions/makeup'
+// import { Link } from 'react-router-dom';
 
+class MakeupItem extends React.Component {
 
-const MakeupItem = ( props ) => {
-  console.log(props)
+  componentDidMount() {
+  this.props.getMakeup()
+
+  }
+
+  render() {
+    console.log(this.props.match.params.id)
   return(
-    <div className="MakeupViewContainer">
-      <h1> Makeup item </h1>
+    <div className="MakeupItemContainer">
+  
+       )}
     </div>
-  )
+    )
+  }
 }
-export default MakeupItem
+
+const mapStateToProps = (state) => {
+  return({
+  makeup: state.makeup
+  })
+}
+
+
+export default connect(mapStateToProps, { getMakeup })(MakeupItem)

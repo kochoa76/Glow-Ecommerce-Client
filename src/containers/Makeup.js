@@ -4,19 +4,25 @@ import './Makeup.css';
 import MakeupCard from '../components/MakeupCard';
 // import MakeupForm from '../containers/MakeupForm';
 import { getMakeup } from '../actions/makeup'
+// import MakeupItem from '../components/MakeupItem'
+// import { getMakeupId } from '../actions/makeup'
 
 
 class Makeup extends Component{
 
   componentDidMount() {
   this.props.getMakeup()
+
 }
 
   render() {
     return (
       <div className="homePage">
       <div className="MakeupContainer">
-        {this.props.makeup.map(makeup => <MakeupCard key={makeup.id} makeup={makeup} handleDelete={this.handleDelete}/>  )}
+        {this.props.makeup.map(makeup =>
+          <MakeupCard key={makeup.id} getMakeup={this.props.getMakeup} makeup={makeup} />
+           )}
+
     </div>
   </div>
     )
