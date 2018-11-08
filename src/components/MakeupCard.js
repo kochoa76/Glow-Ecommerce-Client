@@ -1,12 +1,27 @@
 import React from 'react'
 
-const MakeupCard = (props) => (
-    <div key={props.makeup.id} className="MakeupCard">
-      <img className="MakeupImage" src={props.makeup.img_url} alt={props.makeup.name}/>
-      <h3>{props.makeup.name}</h3>
-      <p> ${props.makeup.price}</p>
-      <p> {props.makeup.description} </p>
-      </div>
-    )
+
+
+class MakeupCard extends React.Component  {
+
+  handleClick = event => {
+    event.preventDefault()
+
+  }
+
+    render() {
+      const { makeup } = this.props
+      return (
+        <div key={makeup.id} className="MakeupCard">
+        <img className="MakeupImage" src={makeup.img_url} alt={makeup.name}/>
+        <div className="namePriceDescrip">
+        <h3 onClick={this.handleClick}>{makeup.name}</h3>
+        <p> ${makeup.price}</p>
+        <p> {makeup.description} </p>
+        </div>
+        </div>
+      )
+    }
+  }
 
 export default MakeupCard

@@ -1,28 +1,24 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-const MakeupNav = () => (
-  <div className="nav">
-    <div className="nav-title">
-      Logo
-    </div>
-    <div className="top-round-rainbow">
-    </div>
-  <div className="nav-links">
-    <div className="eye">
-      <a href="//github.io/jo_geek"> Eye </a>
-    </div>
-    <div className="skin">
-      <a href="http://stackoverflow.com/users/4084003/"> Skin </a>
-    </div>
-    <div className="lip">
-      <a href="https://in.linkedin.com/in/jonesvinothjoseph"> Lip </a>
-    </div>
-    <div className="brushes">
-      <a href="#"> Brushes </a>
-    </div>
-  </div>
-</div>
+const MakeupNav = () => {
+    return (
+        <div className="nav">
+          <div className="nav-title">
+            My Logo
+          </div>
+          <div className="top-round-rainbow">
+          </div>
+          <div className="nav-links">
+            <ul>
+              <li><NavLink to="/About"> About </NavLink></li>
+              <li><NavLink to="/Makeup"> Makeup </NavLink></li>
+              <li><NavLink to="/Media"> In the Media </NavLink></li>
+            </ul>
+          </div>
+        </div>
+    )
+  }
 
-)
 
 export default MakeupNav

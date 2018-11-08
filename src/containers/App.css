@@ -13,6 +13,7 @@
   color: white;
 }
 
+
 .App-link {
   color: #61dafb;
 }
@@ -24,4 +25,108 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.nav {
+  height: 30px;
+  font-family: sans-serif;
+  background-color: white;
+  color: black;
+  padding: 20px;
+}
+
+ .nav-title {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  color: black;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.top-round-rainbow {
+
+  height: 50%; */
+  background: white;
+  border-radius: 4px;
+
+  background-image: repeating-linear-gradient(to right, #c4e17f 50px, #f7fdca 50px, #fad071 50px, #f0766b, #db9dbe, #c49cdf, #6599e2, #61c2e4);
+}
+
+/* .nav-links {
+  margin: 10px 40px 10px 0px;
+  font-size: 18px;
+  color: black;
+  background-color: white;
+  transition: all 0.3s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+} */
+.Navbar {
+  float: left;
+  margin: 100px 0 0 -40px;
+
+}
+
+ul {
+  list-style-type: none;
+}
+
+ .nav-links a {
+  display: inline-block;
+  color: black;
+  padding: 10px;
+  display: flex;
+}
+
+NavLink  {
+  font-family: 'Brandon Grotesque Black';
+  font-size: 1.8rem;
+  text-align: center;
+  color: #1C46C5;
+  display: inline-block;
+  margin: 5rem auto;
+  cursor: pointer;
+}
+
+NavLink::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: .9rem;
+  border-radius: 6rem;
+  background: #03E1D7;
+  transition: width .3s;
+}
+
+NavLink:hover::after {
+  width: 100%;
+  transition: width .3s;
+}
+
+.style-button active {
+  font-family: 'Brandon Grotesque Black';
+  font-size: 1.8rem;
+  text-align: center;
+  color: #1C46C5;
+  display: inline-block;
+  margin: 5rem auto;
+  cursor: pointer;
+}
+
+.style-button active::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: .9rem;
+  border-radius: 6rem;
+  background: #03E1D7;
+  transition: width .3s;
+}
+
+.style-button active:hover::after {
+  width: 100%;
+  transition: width .3s;
 }
