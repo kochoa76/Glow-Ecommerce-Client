@@ -3,6 +3,10 @@ import './App.css'
 import Main from '../containers/Main'
 import Header from '../components/Header'
 import { BrowserRouter as Router } from 'react-router-dom'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faShoppingBag);
 
 const API_URL = process.env.REACT_APP_API_URL;
 

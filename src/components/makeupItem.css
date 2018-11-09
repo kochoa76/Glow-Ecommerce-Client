@@ -34,8 +34,17 @@ h1, p {
   font-size: 30px;
   align-itmes: right;
   margin: -380px 0px 0px 180px;
-  
+}
 
+.shopping-bag-icon-cart {
+  float: right;
+  margin-right: 50px;
+  margin-top: -130px;
+  font-size: 20px;
+}
+
+.shopping-bag-icon {
+  font-size: 25px;
 }
 
 .MakeupItemPrice {

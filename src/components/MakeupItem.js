@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { getMakeup } from '../actions/makeup'
 import { addToCart } from '../actions/cart/cart'
-import { Fashoppingbag } from 'react-icons/fa'
+import { FontAwesomeIcon }  from '@fortawesome/react-fontawesome';
 import './makeupItem.css'
 // import { Link } from 'react-router-dom';
 
@@ -18,6 +18,7 @@ class MakeupItem extends React.Component {
   }
 
   render() {
+    console.log(this.props.cart)
   const filteredItem = this.props.makeup.filter(makeup => makeup.name.replace(/\s/g, '') === this.props.match.params.name)
 
 
@@ -33,7 +34,14 @@ class MakeupItem extends React.Component {
 
   return (
     <div className="MakeupItemPage">
-    <h3> < Fashoppingbag/> </h3>
+    <label className="shopping-bag-icon-cart">
+      <FontAwesomeIcon
+        icon="shopping-bag"
+        className="shopping-bag-icon"
+        color="#8B008B"
+      />
+        {"  "}{this.props.cart}
+      </label>
     {filteredArray}
     <button id="add-to-cart" onClick={this.handleAddToCart}> Add To Cart </button>
     </div>
