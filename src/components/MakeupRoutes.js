@@ -10,7 +10,7 @@ class MakeupRoutes extends React.Component {
   <div>
   <Switch>
     <Route exact path ="/makeup" component={Makeup} />
-    <Route path="/makeup/:id" component={MakeupItem}/>
+    <Route path="/makeup/:name" component={MakeupItem}/>
   </Switch>
   </div>
     )

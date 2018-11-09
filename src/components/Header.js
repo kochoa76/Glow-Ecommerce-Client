@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
      <header>
       <div className="nav">
         <div className="nav-title">
-          Only Good.
+          OnlyClean.
         </div>
         <div className="top-round-rainbow">
         </div>

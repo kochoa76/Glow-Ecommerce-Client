@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+
+}
+
+.container {
+  font-family: "CalibreWeb",Helvetica,sans-serif;
 }
 
 .App-header {
@@ -29,7 +34,6 @@
 
 .nav {
   height: 30px;
-  font-family: sans-serif;
   background-color: white;
   color: black;
   padding: 20px;

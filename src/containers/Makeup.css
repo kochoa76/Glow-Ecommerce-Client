@@ -13,8 +13,10 @@
 
 }
 
-.namePriceDescrip {
+.MakeupName{
   padding: 2%;
+  display: inline-block;
+  margin-left: 90px;
 }
 
 .MakeupImage {
