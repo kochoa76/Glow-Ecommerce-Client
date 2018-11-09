@@ -1,0 +1,46 @@
+.makeupItemImage {
+  width: 70%;
+
+}
+
+.makeupItemContainer {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+h1, p {
+  align-items: center;
+  justify-content: center;
+  display:flex;
+
+}
+
+.makeupItemContainer img {
+  align-items: center;
+  justify-content: center;
+  display:flex;
+  margin-top: 150px;
+}
+
+.makeupItemName {
+  display: flex;
+  float: right;
+  align-itmes: right;
+  margin: -240px 0 0px 65px;
+}
+
+.makeupItemPrice {
+  display: flex;
+  float: right;
+  font-size: 18px;
+  align-items: right;
+  margin: -160px 0 0 -60px;
+}
+
+.makeupItemDescription {
+  display: flex;
+  float: right;
+  align-items: right;
+  margin: -100px 0 0 100px;
+}
