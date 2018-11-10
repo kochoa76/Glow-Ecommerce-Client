@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { getMakeup } from '../actions/makeup'
 import { addItemToCart} from '../actions/cart/cart'
-import { FontAwesomeIcon }  from '@fortawesome/react-fontawesome';
+
 import AddToCart from '../components/AddToCart'
 import './makeupItem.css'
 // import { Link } from 'react-router-dom';
@@ -34,14 +34,6 @@ class MakeupItem extends React.Component {
 
   return (
     <div className="MakeupItemPage">
-    <label className="shopping-bag-icon-cart">
-      <FontAwesomeIcon
-        icon="shopping-bag"
-        className="shopping-bag-icon"
-        color="#8B008B"
-      />
-        {"  "}{this.props.cart.count}
-      </label>
     {filteredArray}
 
     </div>

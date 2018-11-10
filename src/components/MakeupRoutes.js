@@ -2,7 +2,7 @@ import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 import Makeup from '../containers/Makeup'
 import MakeupItem from '../components/MakeupItem'
-
+import Cart from '../containers/Cart'
 class MakeupRoutes extends React.Component {
 
   render() {
@@ -11,6 +11,7 @@ class MakeupRoutes extends React.Component {
   <Switch>
     <Route exact path ="/makeup" component={Makeup} />
     <Route path="/makeup/:name" component={MakeupItem}/>
+    <Route path="/cart" component={Cart}/>
   </Switch>
   </div>
     )

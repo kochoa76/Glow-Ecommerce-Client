@@ -7,6 +7,23 @@
   font-family: "CalibreWeb",Helvetica,sans-serif;
 }
 
+.shopping-bag-icon-cart {
+
+  float: right;
+  display: flex;
+  padding-right: 60px;
+  padding-top: 43px;
+  font-size: 23px;
+}
+
+.shopping-bag-icon {
+  font-size: 30px;
+  margin-top: -2px;
+  margin-right: 8px;
+}
+
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
