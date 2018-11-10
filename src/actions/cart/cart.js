@@ -1,8 +1,11 @@
 
 
-export const addToCart = cart => {
+
+
+export const addItemToCart = makeup => {
+  console.log(makeup)
   return {
-    type: "ADD_TO_CART_SUCCESS",
-    cart
+    type: "ADD_ITEM_TO_CART",
+    makeup
   }
 }

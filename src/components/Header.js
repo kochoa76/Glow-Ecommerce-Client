@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
      <header>
       <div className="nav">
         <div className="nav-title">
-          OnlyClean.
+            GLOW
         </div>
         <div className="top-round-rainbow">
         </div>
