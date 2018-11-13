@@ -3,22 +3,22 @@ import './YourCart.css'
 class YourCart extends React.Component {
 
     render() {
-      const renderItemName= this.props.cart.item.map(item => item.makeup.name)
-      const renderItemPrice = this.props.cart.item.map(item => item.makeup.price)
-      const renderItemImage = this.props.cart.item.map(item => item.makeup.img_url)
 
+      const renderCartItem = this.props.cart.item.map(item => (
+        <div className="makeupItemCart" key={item.makeup.id}>
+          <ul>
+            <li><div className="CartItemName">{item.makeup.name}</div></li><br></br>
+            <li><div className="CartItemPrice">${item.makeup.price}</div></li><br></br>
+            <li><img className="CartItemImage" src={item.makeup.img_url} alt={item.makeup.name}/></li><br></br>
+            <li><h3>Quantity: {this.props.cart.count}</h3></li>
+          </ul>
+        </div>
+      ))
 
       return (
       <div className="YourCartContainer">
-      <div className="CartItemName">
-      {renderItemName}
-      </div>
-      <div className="CartItemPrice">
-      {renderItemPrice}
-      </div>
-      <div className="CartItemImage">
-      {renderItemImage}
-      </div>
+      <h3 className="title"> Your Cart </h3>
+      {renderCartItem}
       </div>
     )
   }

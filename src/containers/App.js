@@ -48,7 +48,7 @@ class App extends React.Component {
             <div>
               <label className="shopping-bag-icon-cart">
                 <NavLink to="/cart" style={{textDecoration: 'none'}}>
-                  <div
+                  <div className="OnMouseHover"
                     onMouseEnter= {this.handleMouseHover}
                     onMouseLeave= {this.handleMouseHover}
                     >
