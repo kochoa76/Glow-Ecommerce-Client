@@ -9,3 +9,11 @@ export const addItemToCart = makeup => {
     makeup
   }
 }
+
+export const removeItemFromCart = makeup => {
+  return {
+    type: "REMOVE_ITEM_FROM_CART",
+    makeup
+
+  }
+}

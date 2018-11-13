@@ -1,9 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './Cart.css'
+import { removeItemFromCart, addItemToCart } from '../actions/cart/cart'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faPlus, faMinus} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon }  from '@fortawesome/react-fontawesome';
+
+library.add(faPlus, faMinus);
+
 class Cart extends React.Component {
 
+
   render() {
+    console.log(this.props.cart)
     const renderCartItem = this.props.cart.item.map(item =>  (
       <div className="makeupItemCart" key={item.makeup.id}>
 
@@ -11,10 +20,25 @@ class Cart extends React.Component {
           <li><div className="ItemName">{item.makeup.name}</div></li><br></br>
           <li><div className="ItemPrice">${item.makeup.price}</div></li><br></br>
           <li><img className="ItemImage" src={item.makeup.img_url} alt={item.makeup.name}/></li><br></br>
-          <li><div className="ItemQuantity">{this.props.cart.count}</div></li>
+          <li><div className="ItemQuantity">
+              <label className="minus-icon-cart"
+              onClick= {() => this.props.removeItemFromCart(item.makeup)}
+              ><FontAwesomeIcon
+            icon="minus"
+            className="minus-icon"
+            color="#828282"
+
+          /></label>{this.props.cart.count}</div></li><label className="plus-icon-cart"><FontAwesomeIcon
+            icon="plus"
+            className="plus-icon"
+            color="#828282"
+            onClick={() => this.props.addItemToCart(item.makeup)}
+
+          /></label>
         </ul>
       </div>
     ))
+
 
 
     return (
@@ -50,4 +74,4 @@ const mapStateToProps = state => {
   cart: state.cart
   })
 }
-export default connect(mapStateToProps)(Cart)
+export default connect(mapStateToProps, { removeItemFromCart, addItemToCart })(Cart)
