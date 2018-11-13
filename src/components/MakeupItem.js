@@ -15,7 +15,8 @@ class MakeupItem extends React.Component {
 
 
   render() {
-    console.log(this.props.cart)
+    
+
   const filteredItem = this.props.makeup.filter(makeup => makeup.name.replace(/\s/g, '') === this.props.match.params.name)
 
 

@@ -8,7 +8,7 @@ import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon }  from '@fortawesome/react-fontawesome';
 import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom';
-
+import YourCart  from '../components/YourCart'
 library.add(faShoppingBag);
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -18,7 +18,8 @@ class App extends React.Component {
     constructor(props){
      super(props)
      this.state={
-       makeup: []
+       makeup: [],
+       isHovering: false
      }
    }
 
@@ -28,20 +29,38 @@ class App extends React.Component {
       .then(makeup => this.setState({ makeup }))
     }
 
+    handleMouseHover = () => {
+
+      this.setState(this.toggleHoverState)
+    }
+
+    toggleHoverState(state) {
+      return {
+        isHovering: !state.isHovering,
+      }
+    }
+
+
     render() {
         return (
           <div className="container">
-
           <Router>
             <div>
               <label className="shopping-bag-icon-cart">
                 <NavLink to="/cart" style={{textDecoration: 'none'}}>
+                  <div
+                    onMouseEnter= {this.handleMouseHover}
+                    onMouseLeave= {this.handleMouseHover}
+                    >
                   <FontAwesomeIcon
                     icon="shopping-bag"
                     className="shopping-bag-icon"
                     color="#8B008B"
+
                   />
                   {"  "}{this.props.cart.count}
+                  </div>
+                  {this.state.isHovering && <div><YourCart cart={this.props.cart}/></div>}
                 </NavLink>
               </label>
               <Header />

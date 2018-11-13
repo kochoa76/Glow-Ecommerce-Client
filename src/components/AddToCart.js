@@ -6,6 +6,8 @@ class AddToCart extends React.Component {
       event.preventDefault();
       this.props.addItemToCart(this.props.makeup)
     }
+
+  
     render() {
     return (
     <button id="add-to-cart" onClick={this.handleAddToCart}> Add To Cart </button>

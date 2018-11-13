@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Cart from '../containers/Cart'
 import Media from '../components/Media'
 import Home from '../containers/Home'
 import About from '../components/About'
@@ -13,6 +13,7 @@ const Main = () => (
           <Route path="/About" component={About} />
           <Route path="/Makeup" component={MakeupRoutes} />
           <Route path="/Media" component={Media} />
+          <Route path ="/Cart" component={Cart}/>
           </Switch>
         </main>
 )
