@@ -5,6 +5,7 @@ import { removeItemFromCart, addItemToCart } from '../actions/cart/cart'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faPlus, faMinus} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon }  from '@fortawesome/react-fontawesome';
+import { NavLink, BrowserRouter as Router } from 'react-router-dom';
 
 library.add(faPlus, faMinus);
 
@@ -12,27 +13,27 @@ class Cart extends React.Component {
 
 
   render() {
+
     console.log(this.props.cart)
     const renderCartItem = this.props.cart.item.map(item =>  (
-      <div className="makeupItemCart" key={item.makeup.id}>
-
+      <div className="makeupItemCart" key={item.id}>
         <ul>
-          <li><div className="ItemName">{item.makeup.name}</div></li><br></br>
-          <li><div className="ItemPrice">${item.makeup.price}</div></li><br></br>
-          <li><img className="ItemImage" src={item.makeup.img_url} alt={item.makeup.name}/></li><br></br>
+          <li><div className="ItemName">{item.name}</div></li><br></br>
+          <li><div className="ItemPrice">${item.price}</div></li><br></br>
+          <li><img className="ItemImage" src={item.img_url} alt={item.name}/></li><br></br>
           <li><div className="ItemQuantity">
               <label className="minus-icon-cart"
-              onClick= {() => this.props.removeItemFromCart(item.makeup)}
+              onClick= {() => this.props.removeItemFromCart(item)}
               ><FontAwesomeIcon
             icon="minus"
             className="minus-icon"
             color="#828282"
 
-          /></label>{this.props.cart.count}</div></li><label className="plus-icon-cart"><FontAwesomeIcon
+          /></label>{this.props.cart.item.filter(product => product.id === item.id).length}</div></li><label className="plus-icon-cart"><FontAwesomeIcon
             icon="plus"
             className="plus-icon"
             color="#828282"
-            onClick={() => this.props.addItemToCart(item.makeup)}
+            onClick={() => this.props.addItemToCart(item)}
 
           /></label>
         </ul>
@@ -42,7 +43,9 @@ class Cart extends React.Component {
 
 
     return (
+      <Router>
       <div className="Cart">
+
         <div className="CartTitle">
         Your Cart
         </div>
@@ -55,14 +58,16 @@ class Cart extends React.Component {
         <div className="Order-Summary">
           <h2 className="SummaryTitle"> Order Summary </h2>
           <div className="Subtotal-Shipping-Tax">
-            <h4> Subtotal </h4>
-            <h4> Shipping & Handling </h4>
-            <h4> Sales Tax </h4>
+            <h4> Subtotal: ${this.props.cart.item.map(item => item.price).reduce((a, b) => a + b, 0)}</h4>
+            <h4> Shipping & Handling:     -- </h4>
+            <h4> Sales Tax:    -- </h4>
           </div>
-          <div className="OrderTotal"> Order Total </div>
-          <button className="Checkout"> Checkout </button>
+          <div className="OrderTotal"> Order Total: ${this.props.cart.item.map(item => item.price).reduce((a, b) => a + b, 0)}</div><br></br>
+          <div className="Checkout"><NavLink to="/cart/checkout" style={{textDecoration: 'none', color: '#828282'}}> Checkout </NavLink></div>
         </div>
-      </div>
+        </div>
+    </Router>
+
 
 
     )

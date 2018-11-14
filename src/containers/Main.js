@@ -5,7 +5,7 @@ import Home from '../containers/Home'
 import About from '../components/About'
 import MakeupRoutes from '../components/MakeupRoutes'
 import { Route, Switch } from 'react-router-dom'
-
+import Checkout from '../containers/Checkout'
 const Main = () => (
         <main>
         <Switch>
@@ -13,7 +13,8 @@ const Main = () => (
           <Route path="/About" component={About} />
           <Route path="/Makeup" component={MakeupRoutes} />
           <Route path="/Media" component={Media} />
-          <Route path ="/Cart" component={Cart}/>
+          <Route path ="/cart" component={Cart}/>
+          <Route path ="/cart/checkout" component={Checkout} />
           </Switch>
         </main>
 )

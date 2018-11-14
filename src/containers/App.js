@@ -42,6 +42,8 @@ class App extends React.Component {
 
 
     render() {
+      
+
         return (
           <div className="container">
           <Router>
@@ -58,7 +60,7 @@ class App extends React.Component {
                     color="#8B008B"
 
                   />
-                  {"  "}{this.props.cart.count}
+                {"  "}{this.props.cart.count}
                   </div>
                   {this.state.isHovering && <div><YourCart cart={this.props.cart}/></div>}
                 </NavLink>

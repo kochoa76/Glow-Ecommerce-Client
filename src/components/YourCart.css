@@ -23,12 +23,19 @@ ul {
 
 .CartItemImage {
   width: 50%;
-  margin-left: -50px;
+  margin-left: 50px;
   margin-top: -500px;
 }
 
 .CartItemName, .CartItemPrice {
-  margin-left: 20px;
+  margin-left: 200px;
+}
+
+.cart-quantity {
+  text-align: center;
+  float: left;
+  margin-top: 180px;
+  margin-right: 180px;
 }
 
 div.OnMouseHover {

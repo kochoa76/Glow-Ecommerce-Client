@@ -5,12 +5,11 @@ class YourCart extends React.Component {
     render() {
 
       const renderCartItem = this.props.cart.item.map(item => (
-        <div className="makeupItemCart" key={item.makeup.id}>
+        <div className="makeupItemCart" key={item.id}>
           <ul>
-            <li><div className="CartItemName">{item.makeup.name}</div></li><br></br>
-            <li><div className="CartItemPrice">${item.makeup.price}</div></li><br></br>
-            <li><img className="CartItemImage" src={item.makeup.img_url} alt={item.makeup.name}/></li><br></br>
-            <li><h3>Quantity: {this.props.cart.count}</h3></li>
+            <li><div className="CartItemName">{item.name}</div></li><br></br>
+            <li><div className="CartItemPrice">${item.price}</div></li><br></br>
+            <li><img className="CartItemImage" src={item.img_url} alt={item.name}/></li><br></br>
           </ul>
         </div>
       ))
@@ -19,6 +18,7 @@ class YourCart extends React.Component {
       <div className="YourCartContainer">
       <h3 className="title"> Your Cart </h3>
       {renderCartItem}
+      <h3 className="cart-quantity">Quantity: {this.props.cart.count}</h3>
       </div>
     )
   }

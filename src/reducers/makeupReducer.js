@@ -7,7 +7,7 @@ function makeupReducer(state=[], action) {
     case "DELETE_MAKEUP_SUCCESS":
       const makeup = state.makeup.filter(makeup => makeup.id !== action.makeup.id);
       return {...state, makeup}
-      
+
     default:
     return state;
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { getMakeup } from '../actions/makeup'
-import { addItemToCart} from '../actions/cart/cart'
+import { addItemToCart } from '../actions/cart/cart'
 
 import AddToCart from '../components/AddToCart'
 import './makeupItem.css'
@@ -15,7 +15,7 @@ class MakeupItem extends React.Component {
 
 
   render() {
-    
+
 
   const filteredItem = this.props.makeup.filter(makeup => makeup.name.replace(/\s/g, '') === this.props.match.params.name)
 
@@ -26,7 +26,7 @@ class MakeupItem extends React.Component {
     <h1 className="MakeupItemName"> {makeup.name} </h1>
     <p className="MakeupItemPrice">  ${makeup.price} </p>
     <p className="MakeupItemDescription"> {makeup.description} </p>
-    <AddToCart makeup={makeup} addItemToCart={this.props.addItemToCart}/>
+    <AddToCart cart={this.props.cart} makeup={makeup} addItemToCart={this.props.addItemToCart} />
 
     </div>
   )
@@ -50,4 +50,4 @@ const mapStateToProps = (state) => {
 }
 
 
-export default connect(mapStateToProps, { getMakeup, addItemToCart })(MakeupItem)
+export default connect(mapStateToProps, { getMakeup, addItemToCart})(MakeupItem)
