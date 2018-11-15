@@ -5,7 +5,7 @@ import { removeItemFromCart, addItemToCart } from '../actions/cart/cart'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faPlus, faMinus} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon }  from '@fortawesome/react-fontawesome';
-import { NavLink, BrowserRouter as Router} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 library.add(faPlus, faMinus);
