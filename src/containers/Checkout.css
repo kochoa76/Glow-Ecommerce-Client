@@ -4,34 +4,42 @@
   display: grid;
   width: 100%;
   margin-top: 50px;
-  width: 30%;
+  width: 10%;
   float: right;
-  margin-right: 70px;
+  margin-right: 300px;
+    padding-right: 80px;
 }
 
 .WrapperCheckout > div {
   border: 0.5px solid;
   background-color: white;
   color: #828282;
+}
 
-
-
-
+.shippingContainer {
+  float: left;
+  margin-left: 200px;
+  color: #828282;
+  padding: 20px;
 }
 
 .CheckoutItemCart {
-  float: right;
   display: flex;
+  padding: 100px;
+  justify-content: center;
+  align-items: center;
+
 
 }
 
 .renderCheckoutItem {
   align-items: center;
   justify-content: center;
-  display: flex;
+  display: inline-grid;
   text-align: center;
-  float: right;
-
+  border-bottom: 1px solid;
+  margin-top: -20px;
+  margin-right: 700px;
 
 }
 
@@ -42,8 +50,23 @@
   border: 0.5px solid;
   padding: 20px;
   margin-top: 10px;
+  text-align: left;
+  margin-right: 700px;
+  padding-right: 100px;
 
 
+
+}
+
+.CheckoutItemName, .CheckoutItemQuantity {
+  float:left;
+  margin-left: -40px;
+  padding: 5px;
+}
+
+.CheckoutItemPrice {
+  float: right;
+  margin-left: 300px;
 }
 
 .checkoutContainer {

@@ -16,6 +16,7 @@ class MakeupForm extends Component {
     }
 
   render() {
+    console.log(this.props.makeupFormData)
   const { name, price, img_url, description } = this.props.makeupFormData
 
   return (
