@@ -65,7 +65,23 @@ class Checkout extends React.Component {
           </form>
           </div>
         </div>
+
+      <div className="ShippingMethod">
+        <h1> Shipping Method </h1>
+        <br></br>
+        <form className="shippingCheckbox">
+        <input name="freeGround" type="checkbox"/>
+        <br></br>
+        <label>Free Ground (5-7 business days) </label>
+        <input name="2ndDay" type="checkbox"/>
+        <br></br>
+        <label> Second Day (3-4 business days)</label>
+        <input name="NextDay" type="checkbox"/>
+        <br></br>
+        <label> Next Day Air (2-3 business days)</label>
+        </form>
       </div>
+  </div>
 
     )
   }

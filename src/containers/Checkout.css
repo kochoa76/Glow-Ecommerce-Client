@@ -32,6 +32,32 @@
 
 }
 
+.ShippingMethod {
+  float: left;
+  margin-left: 0px;
+  margin-top: 20px;
+  margin-right: 200px;
+  color: #828282;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+}
+
+form.shippingCheckbox {
+
+  float: left;
+
+}
+
+.checkoutSubtotal {
+  align-items: center;
+  justify-content: center;
+  display: inline-grid;
+  text-align: center;
+  width: 20%;
+}
+
 .renderCheckoutItem {
   align-items: center;
   justify-content: center;
