@@ -42,7 +42,7 @@ class App extends React.Component {
 
 
     render() {
-      
+
 
         return (
           <div className="container">
@@ -65,11 +65,12 @@ class App extends React.Component {
                   {this.state.isHovering && <div><YourCart cart={this.props.cart}/></div>}
                 </NavLink>
               </label>
-              <Header />
-              <Main />
-            </div>
-          </Router>
-        </div>
+
+                <Header />
+                <Main />
+              </div>
+            </Router>
+          </div>
 
         )
       }

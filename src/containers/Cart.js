@@ -5,7 +5,8 @@ import { removeItemFromCart, addItemToCart } from '../actions/cart/cart'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faPlus, faMinus} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon }  from '@fortawesome/react-fontawesome';
-import { NavLink, BrowserRouter as Router } from 'react-router-dom';
+import { NavLink, BrowserRouter as Router} from 'react-router-dom';
+
 
 library.add(faPlus, faMinus);
 
@@ -14,7 +15,7 @@ class Cart extends React.Component {
 
   render() {
 
-    console.log(this.props.cart)
+    console.log(this.props)
     const renderCartItem = this.props.cart.item.map(item =>  (
       <div className="makeupItemCart" key={item.id}>
         <ul>
@@ -43,9 +44,7 @@ class Cart extends React.Component {
 
 
     return (
-      <Router>
       <div className="Cart">
-
         <div className="CartTitle">
         Your Cart
         </div>
@@ -63,10 +62,11 @@ class Cart extends React.Component {
             <h4> Sales Tax:    -- </h4>
           </div>
           <div className="OrderTotal"> Order Total: ${this.props.cart.item.map(item => item.price).reduce((a, b) => a + b, 0)}</div><br></br>
-          <div className="Checkout"><NavLink to="/cart/checkout" style={{textDecoration: 'none', color: '#828282'}}> Checkout </NavLink></div>
+          <NavLink to='/checkout' style={{textDecoration: 'none', color: '#828282'}}> Checkout </NavLink>
+
         </div>
         </div>
-    </Router>
+
 
 
 

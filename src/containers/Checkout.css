@@ -1,0 +1,15 @@
+.WrapperCheckout {
+  display: grid;
+  width: 100%;
+  margin-left: 300px;
+  margin-top: 50px;
+}
+
+.WrapperCheckout > div {
+  border-top: 0.5px solid;
+  background-color: white;
+  color: #828282;
+  width: 70%;
+
+
+}
