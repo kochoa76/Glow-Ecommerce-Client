@@ -12,12 +12,18 @@ class Checkout extends React.Component {
       address: '81 Pine Street',
       city: 'Seattle',
       country: 'United States',
-      cardNumber: '4321325353233235'
+      cardNumber: '4321325353233235',
+      shipping: 4,
+      salesTax: 2
     }
   }
 
+
+
   render() {
-    console.log(this.props.cart)
+
+    const itemPrice= this.props.cart.item.map(item => item.price).reduce((a, b) => a + b, 0)
+
     const renderCheckoutItem = this.props.cart.item.map(item =>  (
       <div className="CheckoutItemCart" key={item.id}>
         <ul>
@@ -33,11 +39,20 @@ class Checkout extends React.Component {
       <div className="checkoutContainer">
       <h1> Checkout </h1>
         <div className="WrapperCheckout">
-        <h2 className="order-checkout-title"> Order Summary </h2>
-        <div className="renderCheckoutItem">{renderCheckoutItem}</div>
-        <div className="checkoutSubtotal"> SubTotal: ${this.props.cart.item.map(item => item.price).reduce((a, b) => a + b, 0)}</div>
-        </div>
+          <h2 className="order-checkout-title"> Order Summary </h2>
+          <div className="renderCheckoutItem">{renderCheckoutItem}</div>
+          <div className="checkoutSubtotal"> SubTotal: ${itemPrice}
+          <br></br><br></br>
+          Shipping and Handling: ${this.state.shipping}
+          <br></br><br></br>
+          Sales Tax: ${this.state.salesTax}
+          </div>
+
+          <div className="order-total"> Order Total ${itemPrice + this.state.shipping + this.state.salesTax }</div>
+          </div>
+        <button id="purchase" type="submit"> Purchase </button>
       </div>
+
 
       <div className="shippingContainer">
         <h1> Shipping Information </h1>
@@ -61,24 +76,23 @@ class Checkout extends React.Component {
               <label htmlFor="CreditCardInfo"> Credit Card Number: </label>
               <input type="integer" name="cardnumber" value={this.state.cardNumber} onChange={this.handleOnChange}/>
               <br></br><br></br>
-            <button type="submit"> Purchase </button>
           </form>
           </div>
         </div>
 
       <div className="ShippingMethod">
         <h1> Shipping Method </h1>
-        <br></br>
+        <br></br><br></br>
         <form className="shippingCheckbox">
         <input name="freeGround" type="checkbox"/>
-        <br></br>
-        <label>Free Ground (5-7 business days) </label>
+        <label>    Free Ground (5-7 business days) </label><br></br>
+        <p className="freePrice"> $0.00 </p>
         <input name="2ndDay" type="checkbox"/>
-        <br></br>
-        <label> Second Day (3-4 business days)</label>
+        <label>    Second Day (3-4 business days)</label><br></br>
+        <p className="freePrice"> $12.00 </p>
         <input name="NextDay" type="checkbox"/>
-        <br></br>
-        <label> Next Day Air (2-3 business days)</label>
+        <label>    Next Day Air (2-3 business days)</label><br></br>
+        <p className="freePrice"> $20.00 </p>
         </form>
       </div>
   </div>

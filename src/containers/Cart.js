@@ -62,7 +62,7 @@ class Cart extends React.Component {
             <h4> Sales Tax:    -- </h4>
           </div>
           <div className="OrderTotal"> Order Total: ${this.props.cart.item.map(item => item.price).reduce((a, b) => a + b, 0)}</div><br></br>
-          <NavLink to='/checkout' style={{textDecoration: 'none', color: '#828282'}}> Checkout </NavLink>
+          <h2 className="Checkout"><NavLink to='/checkout' style={{textDecoration: 'none', color: 'white'}}> Checkout </NavLink></h2>
 
         </div>
         </div>
