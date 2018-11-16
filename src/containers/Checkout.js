@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './Checkout.css'
-import Purchase from '../components/Purchase'
 import { NavLink } from 'react-router-dom';
 
 class Checkout extends React.Component {

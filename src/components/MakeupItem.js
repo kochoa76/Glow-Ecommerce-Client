@@ -4,7 +4,7 @@ import { getMakeup } from '../actions/makeup'
 import { addItemToCart } from '../actions/cart/cart'
 
 import AddToCart from '../components/AddToCart'
-import './makeupItem.css'
+import './MakeupItem.css'
 // import { Link } from 'react-router-dom';
 
 class MakeupItem extends React.Component {

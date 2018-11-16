@@ -12,7 +12,9 @@
   justify-content: center;
   display: flex;
   width: 40%;
+  margin-top: -100px;
   margin-right: 150%;
+  padding-bottom: 300px;
 }
 
 h1, p {
@@ -45,9 +47,10 @@ h1, p {
 
 .MakeupItemDescription {
   display: flex;
-  font-size: 18px;
+  font-size: 15px;
   align-items: right;
-  margin: -120px 0 20px 170px;
+  width: 40%;
+  margin: -120px 0 20px 590px;
 }
 
 #add-to-cart {
