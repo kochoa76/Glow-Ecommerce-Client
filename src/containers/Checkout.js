@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './Checkout.css'
+import Purchase from '../components/Purchase'
+import { NavLink } from 'react-router-dom';
 
 class Checkout extends React.Component {
 
@@ -14,9 +16,18 @@ class Checkout extends React.Component {
       country: 'United States',
       cardNumber: '4321325353233235',
       shipping: 4,
-      salesTax: 2
+      salesTax: 2,
+      clicked: false
     }
   }
+
+  handlePurchase = event =>  {
+    event.preventDefault();
+    this.setState({
+      clicked: true
+    });
+  }
+
 
 
 
@@ -50,7 +61,7 @@ class Checkout extends React.Component {
 
           <div className="order-total"> Order Total ${itemPrice + this.state.shipping + this.state.salesTax }</div>
           </div>
-        <button id="purchase" type="submit"> Purchase </button>
+        <button id="purchase" type="submit"><NavLink to="/purchase" style={{textDecoration: 'none', color: 'white'}}> Purchase </NavLink></button>
       </div>
 
 
@@ -59,22 +70,22 @@ class Checkout extends React.Component {
           <div className="shipppingInfo">
             <form onSubmit={this.handleOnSubmit}>
               <label htmlFor="firstName">First Name: </label>
-              <input type="text" name="firstName" value={this.state.firstName} onChange={this.handleOnChange}/>
+              <input type="text" name="firstName" value={this.state.firstName} readOnly/>
               <br></br><br></br>
               <label htmlFor="LastName">Last Name: </label>
-              <input type="text" name="name" value={this.state.lastName} onChange={this.handleOnChange}/>
+              <input type="text" name="name" value={this.state.lastName} readOnly/>
               <br></br><br></br>
               <label htmlFor="Address"> Address: </label>
-              <input type="text" name="Address" value={this.state.address} onChange={this.handleOnChange}/>
+              <input type="text" name="Address" value={this.state.address} readOnly/>
               <br></br><br></br>
               <label htmlFor="City"> City:  </label>
-              <input type="text" name="city" value={this.state.city} onChange={this.handleOnChange}/>
+              <input type="text" name="city" value={this.state.city} readOnly/>
               <br></br><br></br>
               <label htmlFor="Country"> Country: </label>
-              <input type="text" name="country" value={this.state.country} onChange={this.handleOnChange}/>
+              <input type="text" name="country" value={this.state.country} readOnly/>
               <br></br><br></br>
               <label htmlFor="CreditCardInfo"> Credit Card Number: </label>
-              <input type="integer" name="cardnumber" value={this.state.cardNumber} onChange={this.handleOnChange}/>
+              <input type="integer" name="cardnumber" value={this.state.cardNumber} readOnly/>
               <br></br><br></br>
           </form>
           </div>
@@ -84,7 +95,7 @@ class Checkout extends React.Component {
         <h1> Shipping Method </h1>
         <br></br><br></br>
         <form className="shippingCheckbox">
-        <input name="freeGround" type="checkbox"/>
+        <input name="freeGround" type="checkbox" readOnly checked/>
         <label>    Free Ground (5-7 business days) </label><br></br>
         <p className="freePrice"> $0.00 </p>
         <input name="2ndDay" type="checkbox"/>

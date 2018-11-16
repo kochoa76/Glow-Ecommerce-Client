@@ -6,6 +6,7 @@ import Home from '../containers/Home'
 import About from '../components/About'
 import MakeupRoutes from '../components/MakeupRoutes'
 import { Route, Switch } from 'react-router-dom'
+import Purchase from '../components/Purchase'
 
 const Main = () => (
         <main>
@@ -16,6 +17,7 @@ const Main = () => (
           <Route path="/Media" component={Media} />
           <Route path ="/cart" component={Cart}/>
           <Route path ="/checkout" component={Checkout} />
+          <Route path ="/purchase" component={Purchase} />
           </Switch>
         </main>
 )
