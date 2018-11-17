@@ -14,14 +14,14 @@ class MakeupCard extends React.Component  {
   }
 
     render() {
-      console.log(this.props.reviews)
+
       const { makeup } = this.props
-      const regexMakeup = makeup.name.replace(/\s/g, '')
+      // const regexMakeup = makeup.name.replace(/\s/g, '')
 
       return (
         <div key={makeup.id} className="MakeupCard">
           <img className="MakeupImage" src={makeup.img_url} alt={makeup.name}/>
-          <button className="MakeupName" onClick={this.handleGetReviews}><NavLink to={`/Makeup/${regexMakeup}`} style={{textDecoration: 'none'}}>{makeup.name}</NavLink></button>
+          <button className="MakeupName" onClick={this.handleGetReviews}><NavLink to={`/Makeup/${makeup.id}`} style={{textDecoration: 'none'}}>{makeup.name}</NavLink></button>
           <div className="MakeupPrice"><p> ${makeup.price}</p></div>
         </div>
       )

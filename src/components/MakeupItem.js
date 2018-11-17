@@ -15,12 +15,10 @@ class MakeupItem extends React.Component {
   }
 
   render() {
-  const makeupId= this.props.match.params.id
 
-  const filteredItem = this.props.makeup.filter(makeup => makeup.name.replace(/\s/g, '') === this.props.match.params.name)
+  const paramsMakeupId= parseInt(this.props.match.params.id)
 
-  const filteredItemId = filteredItem.map(makeup => makeup.id)
-  // const makeupId = parseInt(filteredItemId.toString())
+  const filteredItem = this.props.makeup.filter(makeup => makeup.id===paramsMakeupId)
 
   const filteredArray = filteredItem.map(makeup =>
     <div className="MakeupItemContainer" key={makeup.id}>
@@ -31,11 +29,11 @@ class MakeupItem extends React.Component {
     <AddToCart cart={this.props.cart} makeup={makeup} addItemToCart={this.props.addItemToCart} />
     </div>
 
+
   )
-
-  const reviews = this.props.reviews.map(review => <MakeupReviews key={review.id} rating={review.rating} content={review.content}/>)
-
+console.log(this.props.reviews)
   const MakeupRatings = this.props.reviews.map( review => review.rating)
+  const reviews = this.props.reviews.map(review => <MakeupReviews key={review.id} name= {review.name} city={review.city} rating={review.rating} content={review.content}/>)
   const AvgRating = MakeupRatings.length <= 1 ? null : MakeupRatings.reduce(function(accumulator, currentValue) {
     return (accumulator + currentValue) / MakeupRatings.length
 
@@ -49,10 +47,10 @@ class MakeupItem extends React.Component {
     <div className="MakeupItemPage">
       {filteredArray}
       <div className="ReviewsSection">
-        <h2 className="review-title"> Reviews </h2>
-        <div className="makeupAvgRating"> Avg Rating: {AvgRating} </div>
-        <div className="ReviewContent">{reviews}</div>
-        <div className="ReviewForm"><ReviewForm makeupId={makeupId}/></div>
+        <h2 className="review-title"> Reviews </h2><br></br>
+        <div className="makeupAvgRating"> Avg Rating: {AvgRating} </div><br></br>
+        {reviews}
+        <div className="ReviewForm"><ReviewForm makeupId={paramsMakeupId}/></div>
       </div>
     </div>
     )

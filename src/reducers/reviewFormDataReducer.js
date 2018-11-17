@@ -1,7 +1,7 @@
 const initialState = {
-  makeup_id:3,
+  makeup_id: 0,
   name: '',
-  city: 0,
+  city: '',
   rating: 0,
   content: ''
 }

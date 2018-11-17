@@ -3,6 +3,46 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-left: 40rem;
-  width:50%;
+  margin-left: 18rem;
+  width:60%;
+}
+
+.write-a-review {
+  padding: 2rem;
+  margin-left: 10rem;
+  margin-top: -20rem;
+  font-size: 1.7rem;
+}
+
+.review-form {
+  text-align: left;
+  padding: 2rem;
+
+  margin-left: -19.5rem;
+  font-size: 20px;
+
+}
+
+form input {
+  font-size: 1rem;
+}
+
+button.addReview {
+  border-color: black;
+  color: black;
+  background-color: white;
+  position: relative;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: .1rem;
+  line-height: 1;
+  text-align: center;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  border: 1px solid #414141;
+  display: flex;
+  align-items: center;
+  margin-top: 0%;
+  margin-left: 25%;
 }

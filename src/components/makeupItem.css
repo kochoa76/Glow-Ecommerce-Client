@@ -24,6 +24,14 @@ h1, p {
 
 }
 
+.review-info {
+  align-items: center;
+  width: 70%;
+  margin-left: 13rem;
+  padding:4rem;
+  border-top: 1px solid #414141;
+}
+
 .write-review {
   border-color: black;
   color: black;
@@ -50,38 +58,40 @@ h1, p {
 
 }
 
-.ReviewsSection {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
+
 
 .review-title {
-  text-align: center;
-  justify-content: center;
-  margin-bottom: 25rem;
-  margin-right: 20rem;
-  align-items: center;
+margin-top: 15rem;
+margin-left: 44rem;
+
 
 
 }
 
 .makeupAvgRating {
-  text-align: center;
-  display: flex;
-  margin-right: 20rem;
-  margin-bottom: 18rem;
+  margin-top: -1rem;
+  margin-left: 44rem;
+  padding-bottom: 3rem;
 
 }
 
-.ReviewContent {
-  align-items: center;
-  margin-right: 30rem;
-  justify-content: center;
-  display: inline;
-  margin-top: 20rem;
-  width: 30%;
-  padding-bottom: 10rem;
+.review-rating {
+  margin-bottom: -4.5rem;
+  margin-left: 4rem;
+  font-size: 1.5rem;
+}
+
+.review-name-city {
+  margin-left: 8rem;
+  margin-bottom: -2.5rem;
+}
+
+.review-content {
+  margin-left: 26rem;
+  width: 50%;
+  padding-bottom: 2rem;
+
+
 }
 
 .MakeupItemName {

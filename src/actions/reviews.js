@@ -25,9 +25,9 @@ export const getReviews = (id) => {
   }
 }
 
-export const createReviews = review => {
+export const createReviews = (review, id) => {
     return (dispatch) => {
-      return fetch(`${API_URL}/makeup/1/reviews`, {
+      return fetch(`${API_URL}/makeup/${id}/reviews`, {
         method: "POST",
         headers: {
           "Content-type": "application/json"
@@ -35,7 +35,8 @@ export const createReviews = review => {
         body: JSON.stringify(review)
       })
       .then(response => response.json())
-      .then( review => dispatch(addReview(review)))
+      .then( review => { dispatch(addReview(review))
+                         dispatch(resetReviewForm())})
       .catch( error => console.log(error))
     }
   }
