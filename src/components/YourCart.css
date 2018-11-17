@@ -1,12 +1,9 @@
 .YourCartContainer {
   background-color: white;
   border: 1px solid #F0F8FF;
-  padding: 30px;
-  width: 40%;
-  height: 30%;
+
   justify-content: center;
   font-size: 13px;
-  margin: 20px;
   margin-top: -40px;
   float:right;
   display: flex;
@@ -22,13 +19,18 @@ ul {
 }
 
 .CartItemImage {
-  width: 50%;
-  margin-left: 50px;
-  margin-top: -500px;
+  width: 100%;
+  margin-left: 35px;
+
+  margin-top: -420px;
+  padding-left: 20px;
+  padding-right: 20px;
+
 }
 
 .CartItemName, .CartItemPrice {
   margin-left: 200px;
+  margin-right: 50px;
 }
 
 .cart-quantity {

@@ -24,12 +24,25 @@ h1, p {
 
 }
 
+.noReviews {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 3rem;
+  margin-top: -2rem;
+  margin-left: 6rem;
+}
+
 .review-info {
   align-items: center;
   width: 70%;
   margin-left: 13rem;
   padding:4rem;
   border-top: 1px solid #414141;
+}
+
+.ReviewsSection {
+  margin-top: -5rem;
 }
 
 .write-review {

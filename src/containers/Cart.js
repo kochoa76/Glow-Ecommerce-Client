@@ -14,8 +14,6 @@ class Cart extends React.Component {
 
 
   render() {
-
-    console.log(this.props)
     const renderCartItem = this.props.cart.item.map(item =>  (
       <div className="makeupItemCart" key={item.id}>
         <ul>
