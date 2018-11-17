@@ -4,6 +4,7 @@ import './Makeup.css';
 import MakeupCard from '../components/MakeupCard';
 // import MakeupForm from '../containers/MakeupForm';
 import { getMakeup } from '../actions/makeup'
+import { getReviews } from '../actions/reviews'
 // import MakeupItem from '../components/MakeupItem'
 // import { getMakeupId } from '../actions/makeup'
 
@@ -20,7 +21,7 @@ class Makeup extends Component{
       <div className="homePage">
       <div className="MakeupContainer">
         {this.props.makeup.map(makeup =>
-          <MakeupCard key={makeup.id} getMakeup={this.props.getMakeup} makeup={makeup} />
+          <MakeupCard key={makeup.id} getReviews= {this.props.getReviews} getMakeup={this.props.getMakeup} makeup={makeup} />
            )}
 
     </div>
@@ -35,4 +36,4 @@ const mapStateToProps = (state) => {
   })
 }
 
-export default connect(mapStateToProps, { getMakeup })(Makeup)
+export default connect(mapStateToProps, { getMakeup, getReviews})(Makeup)

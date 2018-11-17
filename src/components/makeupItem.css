@@ -24,11 +24,64 @@ h1, p {
 
 }
 
+.write-review {
+  border-color: black;
+  color: black;
+  background-color: white;
+  position: relative;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: .1rem;
+  line-height: 1;
+  text-align: center;
+  padding: 10px;
+  text-transform: uppercase;
+  border: 1px solid #414141;
+  display: flex;
+  align-items: center;
+  margin-top: 70rem;
+  margin-left: 55%;
+}
+
 .MakeupItemContainer img {
   align-items: center;
   justify-content: center;
   display:flex;
 
+}
+
+.ReviewsSection {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.review-title {
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 25rem;
+  margin-left: 46rem;
+  align-items: center;
+
+
+}
+
+.makeupAvgRating {
+  text-align: center;
+  display: flex;
+  margin-right: 2rem;
+  margin-bottom: 18rem;
+}
+
+.ReviewContent {
+  align-items: center;
+  margin-left: -10rem;
+  justify-content: center;
+  display: inline;
+  margin-top: 20rem;
+  width: 30%;
+  padding-bottom: 10rem;
 }
 
 .MakeupItemName {
