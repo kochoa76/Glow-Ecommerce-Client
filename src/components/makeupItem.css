@@ -40,8 +40,7 @@ h1, p {
   border: 1px solid #414141;
   display: flex;
   align-items: center;
-  margin-top: 70rem;
-  margin-left: 55%;
+
 }
 
 .MakeupItemContainer img {
@@ -61,7 +60,7 @@ h1, p {
   text-align: center;
   justify-content: center;
   margin-bottom: 25rem;
-  margin-left: 46rem;
+  margin-right: 20rem;
   align-items: center;
 
 
@@ -70,13 +69,14 @@ h1, p {
 .makeupAvgRating {
   text-align: center;
   display: flex;
-  margin-right: 2rem;
+  margin-right: 20rem;
   margin-bottom: 18rem;
+
 }
 
 .ReviewContent {
   align-items: center;
-  margin-left: -10rem;
+  margin-right: 30rem;
   justify-content: center;
   display: inline;
   margin-top: 20rem;

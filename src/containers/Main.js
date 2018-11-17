@@ -7,6 +7,7 @@ import About from '../components/About'
 import MakeupRoutes from '../components/MakeupRoutes'
 import { Route, Switch } from 'react-router-dom'
 import Purchase from '../components/Purchase'
+import ReviewForm from '../containers/ReviewForm'
 
 const Main = () => (
         <main>
@@ -18,6 +19,7 @@ const Main = () => (
           <Route path ="/cart" component={Cart}/>
           <Route path ="/checkout" component={Checkout} />
           <Route path ="/purchase" component={Purchase} />
+          <Route path="/write-review" component={ReviewForm} />
           </Switch>
         </main>
 )

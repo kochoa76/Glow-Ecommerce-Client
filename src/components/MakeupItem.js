@@ -6,6 +6,8 @@ import { getReviews } from '../actions/reviews'
 import AddToCart from '../components/AddToCart'
 import MakeupReviews from '../components/MakeupReviews'
 import './MakeupItem.css'
+import { NavLink } from 'react-router-dom'
+import ReviewForm from '../containers/ReviewForm'
 // import { Link } from 'react-router-dom';
 
 class MakeupItem extends React.Component {
@@ -46,10 +48,10 @@ class MakeupItem extends React.Component {
     <div className="MakeupItemPage">
       {filteredArray}
       <div className="ReviewsSection">
-        <button className="write-review"> Write a Review </button>
         <h2 className="review-title"> Reviews </h2>
         <div className="makeupAvgRating"> Avg Rating: {AvgRating} </div>
         <div className="ReviewContent">{reviews}</div>
+        <div className="write-review"><ReviewForm /></div>
       </div>
     </div>
     )

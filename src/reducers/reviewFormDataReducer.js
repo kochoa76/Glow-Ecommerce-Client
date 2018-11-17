@@ -8,7 +8,7 @@ const initialState = {
 export default function makeupFormDataReducer(state = initialState, action) {
 
    switch(action.type) {
-     case 'UPDATED_DATA':
+     case 'UPDATED_REVIEW_DATA':
       return action.reviewFormData
 
      case 'RESET_REVIEW_FORM':

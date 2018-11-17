@@ -10,8 +10,8 @@ const setReview = reviews => {
 
 const addReview = review => {
     return {
-      type: "CREATE_MAKEUP_SUCCESS",
-      review 
+      type: "CREATE_REVIEW_SUCCESS",
+      review
     }
 }
 
