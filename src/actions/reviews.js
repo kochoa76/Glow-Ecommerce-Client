@@ -1,3 +1,4 @@
+import { resetReviewForm } from './reviewFormData'
 const API_URL = process.env.REACT_APP_API_URL;
 
 //Action Creators
@@ -24,17 +25,17 @@ export const getReviews = (id) => {
   }
 }
 
-export const createReviews = (review, id) => {
+export const createReviews = (reviewFormData, id) => {
     return (dispatch) => {
       return fetch(`${API_URL}/makeup/${id}/reviews`, {
         method: "POST",
         headers: {
           "Content-type": "application/json"
         },
-        body: JSON.stringify(review)
+        body: JSON.stringify(reviewFormData)
       })
       .then(response => response.json())
-      .then( makeup => console.log(makeup))
+      .then( review => dispatch(addReview(review)))
       .catch( error => console.log(error))
     }
   }

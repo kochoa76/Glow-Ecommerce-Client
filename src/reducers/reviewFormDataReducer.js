@@ -5,12 +5,11 @@ const initialState = {
   content: ''
 }
 
-export default function makeupFormDataReducer(state = initialState, action) {
+function reviewFormDataReducer(state = initialState, action) {
 
    switch(action.type) {
      case 'UPDATED_REVIEW_DATA':
       return action.reviewFormData
-
      case 'RESET_REVIEW_FORM':
       return initialState;
 
@@ -20,3 +19,4 @@ export default function makeupFormDataReducer(state = initialState, action) {
 
 
 }
+export default reviewFormDataReducer

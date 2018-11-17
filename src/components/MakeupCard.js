@@ -2,6 +2,9 @@ import React from 'react';
 // import MakeupItem from './MakeupItem';
 import { NavLink } from 'react-router-dom';
 
+
+
+
 class MakeupCard extends React.Component  {
 
   handleGetReviews = event => {
@@ -11,7 +14,7 @@ class MakeupCard extends React.Component  {
   }
 
     render() {
-
+      console.log(this.props.reviews)
       const { makeup } = this.props
       const regexMakeup = makeup.name.replace(/\s/g, '')
 

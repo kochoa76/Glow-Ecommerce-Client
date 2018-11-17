@@ -6,9 +6,17 @@ import './ReviewForm.css'
 
 class ReviewForm extends Component {
 
+  constructor(props){
+    super(props)
+      this.state= {
+        makeupId: this.props.makeupId
+      }
+    }
+
+
   handleSubmit = event => {
     event.preventDefault();
-    this.props.createReviews(this.props.reviewFormData)
+    console.log(this.props.createReviews(this.props.reviewFormData, this.props.makeupId))
   }
 
   handleOnChange= event => {
@@ -18,6 +26,7 @@ class ReviewForm extends Component {
 
   render() {
     console.log(this.props.reviewFormData)
+
   const { name, city, rating, content } = this.props.reviewFormData
 
   return (
@@ -25,18 +34,19 @@ class ReviewForm extends Component {
     Submit a Review:
     <br></br>
     <form onSubmit={this.handleOnSubmit}>
+      <label htmlFor="makeupId"> MakeupId: </label>
+      <input type="number" name="makeupId" value={this.state.makeupId} onChange={this.handleOnChange} />
       <label htmlFor="name"> Name: </label>
       <input type="text" name="name" value={name} onChange={this.handleOnChange}/>
       <br></br>
       <label htmlFor="city"> City: </label>
-      <input type="number" name="city" value={city} onChange={this.handleOnChange}/>
+      <input type="text" name="city" value={city} onChange={this.handleOnChange}/>
       <br></br>
       <label htmlFor="rating"> Rating:  </label>
-      <input type="text" name="rating" value={rating} onChange={this.handleOnChange}/>
+      <input type="number" name="rating" value={rating} onChange={this.handleOnChange}/>
       <br></br>
       <label htmlFor="content"> Content: </label>
       <input type="text" name="content" value={content} onChange={this.handleOnChange}/>
-
       <button type="submit"> Add Review </button>
       </form>
     </div>

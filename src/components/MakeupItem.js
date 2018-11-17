@@ -6,9 +6,7 @@ import { getReviews } from '../actions/reviews'
 import AddToCart from '../components/AddToCart'
 import MakeupReviews from '../components/MakeupReviews'
 import './MakeupItem.css'
-import { NavLink } from 'react-router-dom'
 import ReviewForm from '../containers/ReviewForm'
-// import { Link } from 'react-router-dom';
 
 class MakeupItem extends React.Component {
 
@@ -16,13 +14,12 @@ class MakeupItem extends React.Component {
   this.props.getMakeup()
   }
 
-
-
   render() {
-
 
   const filteredItem = this.props.makeup.filter(makeup => makeup.name.replace(/\s/g, '') === this.props.match.params.name)
 
+  const filteredItemId = filteredItem.map(makeup => makeup.id)
+  const makeupId = parseInt(filteredItemId.toString())
 
   const filteredArray = filteredItem.map(makeup =>
     <div className="MakeupItemContainer" key={makeup.id}>
@@ -51,7 +48,7 @@ class MakeupItem extends React.Component {
         <h2 className="review-title"> Reviews </h2>
         <div className="makeupAvgRating"> Avg Rating: {AvgRating} </div>
         <div className="ReviewContent">{reviews}</div>
-        <div className="write-review"><ReviewForm /></div>
+        <div className="ReviewForm"><ReviewForm makeupId={makeupId}/></div>
       </div>
     </div>
     )
