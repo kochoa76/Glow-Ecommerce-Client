@@ -1,4 +1,5 @@
 const initialState = {
+  makeup_id:3,
   name: '',
   city: 0,
   rating: 0,

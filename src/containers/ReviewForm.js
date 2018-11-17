@@ -6,17 +6,14 @@ import './ReviewForm.css'
 
 class ReviewForm extends Component {
 
-  constructor(props){
-    super(props)
-      this.state= {
-        makeupId: this.props.makeupId
-      }
-    }
 
-
-  handleSubmit = event => {
+  handleOnSubmit = event => {
     event.preventDefault();
-    console.log(this.props.createReviews(this.props.reviewFormData, this.props.makeupId))
+    this.props.createReviews(this.props.reviewFormData)
+  }
+
+  handleMakeupIdChange = event => {
+
   }
 
   handleOnChange= event => {
@@ -27,7 +24,7 @@ class ReviewForm extends Component {
   render() {
     console.log(this.props.reviewFormData)
 
-  const { name, city, rating, content } = this.props.reviewFormData
+  const { name, city, rating, content, makeup_id } = this.props.reviewFormData
 
   return (
     <div className="review-form-container">
@@ -35,7 +32,7 @@ class ReviewForm extends Component {
     <br></br>
     <form onSubmit={this.handleOnSubmit}>
       <label htmlFor="makeupId"> MakeupId: </label>
-      <input type="number" name="makeupId" value={this.state.makeupId} onChange={this.handleOnChange} />
+      <input type="number" name="makeupId" value={makeup_id} onChange={this.handleOnChange} />
       <label htmlFor="name"> Name: </label>
       <input type="text" name="name" value={name} onChange={this.handleOnChange}/>
       <br></br>

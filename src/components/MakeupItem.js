@@ -15,11 +15,12 @@ class MakeupItem extends React.Component {
   }
 
   render() {
+  const makeupId= this.props.match.params.id
 
   const filteredItem = this.props.makeup.filter(makeup => makeup.name.replace(/\s/g, '') === this.props.match.params.name)
 
   const filteredItemId = filteredItem.map(makeup => makeup.id)
-  const makeupId = parseInt(filteredItemId.toString())
+  // const makeupId = parseInt(filteredItemId.toString())
 
   const filteredArray = filteredItem.map(makeup =>
     <div className="MakeupItemContainer" key={makeup.id}>
@@ -37,6 +38,9 @@ class MakeupItem extends React.Component {
   const MakeupRatings = this.props.reviews.map( review => review.rating)
   const AvgRating = MakeupRatings.length <= 1 ? null : MakeupRatings.reduce(function(accumulator, currentValue) {
     return (accumulator + currentValue) / MakeupRatings.length
+
+
+
   })
 
 

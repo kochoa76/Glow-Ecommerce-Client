@@ -1,4 +1,5 @@
 const initialState = {
+  makeup_id: 0,
   name: '',
   price: 0,
   img_url: '',
