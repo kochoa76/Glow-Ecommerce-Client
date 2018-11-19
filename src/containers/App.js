@@ -35,15 +35,14 @@ class App extends React.Component {
     }
 
     toggleHoverState(state) {
-      return {
-        isHovering: !state.isHovering,
-      }
+      return ({
+        isHovering: !state.isHovering
+      })
     }
 
 
     render() {
-
-
+      console.log(this.state.isHovering)
         return (
           <div className="container">
           <Router>
@@ -51,18 +50,17 @@ class App extends React.Component {
               <label className="shopping-bag-icon-cart">
                 <NavLink to="/cart" style={{textDecoration: 'none'}}>
                   <div className="OnMouseHover"
-                    onMouseEnter= {this.handleMouseHover}
-                    onMouseLeave= {this.handleMouseHover}
+                    onMouseEnter={this.handleMouseHover}
+                    onMouseLeave={this.handleMouseHover}
                     >
+                    {this.state.isHovering && <div className="hoverYourCart"><YourCart cart={this.props.cart}/></div>}
                   <FontAwesomeIcon
                     icon="shopping-bag"
                     className="shopping-bag-icon"
                     color="#8B008B"
-
                   />
                 {"  "}{this.props.cart.count}
                   </div>
-                  {this.state.isHovering && <div><YourCart cart={this.props.cart}/></div>}
                 </NavLink>
               </label>
 

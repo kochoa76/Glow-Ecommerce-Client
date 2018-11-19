@@ -31,15 +31,14 @@ class MakeupItem extends React.Component {
 
 
   )
-console.log(this.props.reviews)
+
   const MakeupRatings = this.props.reviews.map( review => review.rating)
   const reviews = this.props.reviews.length === 0 ? <h3 className="noReviews">No Reviews </h3> : this.props.reviews.map(review => <MakeupReviews key={review.id} name= {review.name} city={review.city} rating={review.rating} content={review.content}/>)
-  const AvgRating = MakeupRatings.length <= 1 ? null : MakeupRatings.reduce(function(accumulator, currentValue) {
-    return (accumulator + currentValue) / MakeupRatings.length
+  // const AvgRating = MakeupRatings.length <= 1 ? MakeupRatings : MakeupRatings.reduce(function(accumulator, currentValue) {
+  //   return (accumulator + currentValue) / MakeupRatings.length
+  const SumRating = MakeupRatings.length <=1 ? MakeupRatings : MakeupRatings.reduce(function(a, b) { return a + b })
+  const AvgRating = SumRating / MakeupRatings.length
 
-
-
-  })
 
 
 

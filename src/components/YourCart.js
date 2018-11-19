@@ -1,5 +1,6 @@
 import React from 'react';
 import './YourCart.css'
+
 class YourCart extends React.Component {
 
     render() {
@@ -13,7 +14,7 @@ class YourCart extends React.Component {
           </ul>
         </div>
       ))
-      console.log(renderCartItem)
+
       return (
       <div className="YourCartContainer">
       <h3 className="title"> Your Cart </h3>

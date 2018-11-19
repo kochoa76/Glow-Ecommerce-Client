@@ -37,24 +37,17 @@
 }
 
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .nav {
   height: 30px;
   background-color: white;
   color: black;
   padding: 20px;
+}
+
+div.onMouseHover {
+  display: inline-block;
+  pointer-events: none;
 }
 
  .nav-title {
@@ -76,8 +69,7 @@
   background: white;
   border-radius: 4px;
 
-  background-image: repeating-linear-gradient(to right, #c4e17f 50px, #f7fdca 50px, #fad071 50px, #f0766b, #db9dbe, #c49cdf, #6599e2, #61c2e4);
-}
+background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);}
 
 .nav-links{
   font-size: 18px;

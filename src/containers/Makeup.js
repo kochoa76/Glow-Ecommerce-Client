@@ -20,7 +20,6 @@ class Makeup extends Component{
 }
 
   render() {
-    const filler = <div> filler </div>
     return (
       <div className="homePage">
       <div className="MakeupContainer">
