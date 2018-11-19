@@ -45,9 +45,9 @@ class Checkout extends React.Component {
     ))
 
     return (
-      <div>
+      <div className="pageContainer">
       <div className="checkoutContainer">
-      <h1> Checkout </h1>
+      
         <div className="WrapperCheckout">
           <h2 className="order-checkout-title"> Order Summary </h2>
           <div className="renderCheckoutItem">{renderCheckoutItem}</div>
@@ -57,7 +57,6 @@ class Checkout extends React.Component {
           <br></br><br></br>
           Sales Tax: ${this.state.salesTax}
           </div>
-
           <div className="order-total"> Order Total ${itemPrice + this.state.shipping + this.state.salesTax }</div>
           </div>
         <button id="purchase" type="submit"><NavLink to="/purchase" style={{textDecoration: 'none', color: 'white'}}> Purchase </NavLink></button>
@@ -65,8 +64,8 @@ class Checkout extends React.Component {
 
 
       <div className="shippingContainer">
-        <h1> Shipping Information </h1>
-          <div className="shipppingInfo">
+          <div className="shippingInfo">
+            <h1 className="shipping-info-title"> Shipping Information </h1>
             <form onSubmit={this.handleOnSubmit}>
               <label htmlFor="firstName">First Name: </label>
               <input type="text" name="firstName" value={this.state.firstName} readOnly/>
@@ -88,23 +87,24 @@ class Checkout extends React.Component {
               <br></br><br></br>
           </form>
           </div>
+          <div className="ShippingMethod">
+            <h1 className="shipping-method-title"> Shipping Method </h1>
+            <br></br><br></br>
+            <form className="shippingCheckbox">
+            <input name="freeGround" type="checkbox" readOnly checked/>
+            <label>    Free Ground (5-7 business days) </label><br></br>
+            <p className="freePrice"> $0.00 </p>
+            <input name="2ndDay" type="checkbox"/>
+            <label>    Second Day (3-4 business days)</label><br></br>
+            <p className="freePrice"> $12.00 </p>
+            <input name="NextDay" type="checkbox"/>
+            <label>    Next Day Air (2-3 business days)</label><br></br>
+            <p className="freePrice"> $20.00 </p>
+            </form>
+          </div>
         </div>
 
-      <div className="ShippingMethod">
-        <h1> Shipping Method </h1>
-        <br></br><br></br>
-        <form className="shippingCheckbox">
-        <input name="freeGround" type="checkbox" readOnly checked/>
-        <label>    Free Ground (5-7 business days) </label><br></br>
-        <p className="freePrice"> $0.00 </p>
-        <input name="2ndDay" type="checkbox"/>
-        <label>    Second Day (3-4 business days)</label><br></br>
-        <p className="freePrice"> $12.00 </p>
-        <input name="NextDay" type="checkbox"/>
-        <label>    Next Day Air (2-3 business days)</label><br></br>
-        <p className="freePrice"> $20.00 </p>
-        </form>
-      </div>
+
   </div>
 
     )

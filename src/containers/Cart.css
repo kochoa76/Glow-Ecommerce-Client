@@ -33,8 +33,8 @@
 }
 
 .ItemQuantity {
-  margin-left: 400px;
-  margin-top: -85px;
+  margin-left: 430px;
+  margin-top: -82px;
 }
 
 .CartData {
@@ -81,13 +81,24 @@
 
 .minus-icon {
   margin-left: -20px;
-  margin-top: 30px;
+  margin-top: 40px;
+}
+
+.minus-icon-cart {
+  margin-left: -20px;
+  margin-top: 5px;
+  padding-right: 10px;
 }
 
 .plus-icon {
   margin-left: 420px;
   margin-top: -27px;
   margin-bottom: 100px
+}
+
+.plus-icon-cart {
+  margin-top: -15px;
+  margin-left: 15px;
 }
 
 .Price, .SubTotal, .Quantity, .Product{

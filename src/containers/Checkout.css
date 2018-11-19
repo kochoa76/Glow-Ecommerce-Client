@@ -1,8 +1,10 @@
 
-
+.pageContainer {
+  width: 100%;
+}
 .WrapperCheckout {
   display: grid;
-  margin-top: 50px;
+  margin-bottom: -2rem;
   width: 20%;
   float: right;
   margin-right: 100px;
@@ -18,12 +20,24 @@
 
 .shippingContainer {
   float: left;
-  margin-left: 200px;
+  margin-left: 220px;
   color: #828282;
   padding: 20px;
-  margin-top: -550px;
+  margin-top: -34rem;
+  display: flex-reverse;
+
 }
 
+h1.checkout-title {
+  padding: 2rem;
+  margin: 1rem;
+}
+
+.shippingInfo{
+
+  padding-bottom: 14rem;
+
+}
 .CheckoutItemCart {
   display: flex;
   justify-content: center;
@@ -56,9 +70,8 @@
 
 .ShippingMethod {
   float: left;
-  margin-left: 138px;
-  margin-top: -180px;
-  margin-right: 200px;
+  margin-left: -3rem;
+  text-align: left;
   color: #828282;
   display: inline-flex;
   align-items: center;
@@ -67,15 +80,31 @@
   padding-bottom: 100px;
   box-sizing: border-box;
   position: relative;
-  width: 30%;
 
+
+}
+
+h1.shipping-info-title {
+  text-align: left;
+  display: flex;
+  float: left;
+
+}
+
+h1.shipping-method-title {
+  text-align: left;
+  display: flex;
+  margin-left: 3rem;
+  margin-top: -10rem;
 }
 
 form.shippingCheckbox {
 
   float: left;
-  margin-left: 80px;
+  margin-left: 45px;
   text-align: left;
+  margin-top: -2rem;
+
 
 }
 
