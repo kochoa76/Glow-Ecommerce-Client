@@ -1,5 +1,6 @@
 import React from 'react';
 import './MakeupItem.css'
+
 const MakeupReviews = (props) => (
 
   <div className="review-info">

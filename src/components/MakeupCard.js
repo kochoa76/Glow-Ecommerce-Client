@@ -1,9 +1,5 @@
 import React from 'react';
-// import MakeupItem from './MakeupItem';
 import { NavLink } from 'react-router-dom';
-import './MakeupCard.css'
-
-
 
 class MakeupCard extends React.Component  {
 
@@ -16,7 +12,6 @@ class MakeupCard extends React.Component  {
     render() {
 
       const { makeup } = this.props
-      // const regexMakeup = makeup.name.replace(/\s/g, '')
 
       return (
         <div key={makeup.id} className="MakeupCard">

@@ -4,8 +4,8 @@ import './YourCart.css'
 class YourCart extends React.Component {
 
     render() {
-
-      const renderCartItem = this.props.cart.item.map(item => (
+      const { cart } = this.props
+      const renderCartItem = cart.item.map(item => (
         <div className="makeupItemCart" key={item.id}>
           <ul>
             <li><div className="CartItemName">{item.name}</div></li><br></br>
@@ -16,12 +16,12 @@ class YourCart extends React.Component {
       ))
 
       return (
-      <div className="YourCartContainer">
-      <h3 className="title"> Your Cart </h3>
-      {renderCartItem}
-      <h3 className="cart-quantity">Quantity: {this.props.cart.count}</h3>
+        <div className="YourCartContainer">
+          <h3 className="title"> Your Cart </h3>
+            {renderCartItem}
+          <h3 className="cart-quantity">Quantity: {cart.count}</h3>
       </div>
-    )
+      )
+    }
   }
-}
 export default YourCart;
