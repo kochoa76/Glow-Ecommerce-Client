@@ -1,7 +1,4 @@
 
-
-
-
 export const addItemToCart = (makeup) => {
   return {
     type: "ADD_ITEM_TO_CART",

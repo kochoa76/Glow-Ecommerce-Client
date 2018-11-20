@@ -16,6 +16,7 @@ const addReview = review => {
     }
 }
 
+// Async Actions
 export const getReviews = (id) => {
   return (dispatch) => {
     return fetch(`${API_URL}/makeup/${id}/reviews`)

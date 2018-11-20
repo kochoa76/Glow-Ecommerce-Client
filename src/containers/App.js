@@ -9,6 +9,7 @@ import { FontAwesomeIcon }  from '@fortawesome/react-fontawesome';
 import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom';
 import YourCart  from '../components/YourCart'
+
 library.add(faShoppingBag);
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -40,9 +41,7 @@ class App extends React.Component {
       })
     }
 
-
     render() {
-      console.log(this.state.isHovering)
         return (
           <div className="container">
           <Router>
@@ -59,17 +58,15 @@ class App extends React.Component {
                     className="shopping-bag-icon"
                     color="#8B008B"
                   />
-                {"  "}{this.props.cart.count}
+                  {"  "}{this.props.cart.count}
                   </div>
                 </NavLink>
               </label>
-
-                <Header />
-                <Main />
-              </div>
-            </Router>
-          </div>
-
+              <Header />
+              <Main />
+            </div>
+          </Router>
+        </div>
         )
       }
     }
@@ -79,4 +76,5 @@ class App extends React.Component {
         cart: state.cart
       }
     }
+    
 export default connect(mapStateToProps)(App)

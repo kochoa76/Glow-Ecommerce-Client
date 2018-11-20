@@ -27,9 +27,6 @@ class Checkout extends React.Component {
     });
   }
 
-
-
-
   render() {
 
     const itemPrice= this.props.cart.item.map(item => item.price).reduce((a, b) => a + b, 0)
@@ -46,21 +43,20 @@ class Checkout extends React.Component {
 
     return (
       <div className="pageContainer">
-      <div className="checkoutContainer">
-      
-        <div className="WrapperCheckout">
-          <h2 className="order-checkout-title"> Order Summary </h2>
-          <div className="renderCheckoutItem">{renderCheckoutItem}</div>
-          <div className="checkoutSubtotal"> SubTotal: ${itemPrice}
-          <br></br><br></br>
-          Shipping and Handling: ${this.state.shipping}
-          <br></br><br></br>
-          Sales Tax: ${this.state.salesTax}
-          </div>
-          <div className="order-total"> Order Total ${itemPrice + this.state.shipping + this.state.salesTax }</div>
-          </div>
+        <div className="checkoutContainer">
+          <div className="WrapperCheckout">
+            <h2 className="order-checkout-title"> Order Summary </h2>
+            <div className="renderCheckoutItem">{renderCheckoutItem}</div>
+            <div className="checkoutSubtotal"> SubTotal: ${itemPrice}
+              <br></br><br></br>
+              Shipping and Handling: ${this.state.shipping}
+              <br></br><br></br>
+              Sales Tax: ${this.state.salesTax}
+           </div>
+           <div className="order-total"> Order Total ${itemPrice + this.state.shipping + this.state.salesTax }</div>
+         </div>
         <button id="purchase" type="submit"><NavLink to="/purchase" style={{textDecoration: 'none', color: 'white'}}> Purchase </NavLink></button>
-      </div>
+       </div>
 
 
       <div className="shippingContainer">
@@ -85,7 +81,7 @@ class Checkout extends React.Component {
               <label htmlFor="CreditCardInfo"> Credit Card Number: </label>
               <input type="integer" name="cardnumber" value={this.state.cardNumber} readOnly/>
               <br></br><br></br>
-          </form>
+           </form>
           </div>
           <div className="ShippingMethod">
             <h1 className="shipping-method-title"> Shipping Method </h1>
@@ -103,10 +99,7 @@ class Checkout extends React.Component {
             </form>
           </div>
         </div>
-
-
-  </div>
-
+      </div>
     )
   }
 }
@@ -116,4 +109,5 @@ const mapStateToProps = state => {
   cart: state.cart
   })
 }
+
 export default connect(mapStateToProps)(Checkout)
