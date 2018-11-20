@@ -2,7 +2,7 @@ import React from 'react';
 import Checkout from '../containers/Checkout'
 import Cart from '../containers/Cart'
 import Media from '../components/Media'
-import Home from '../containers/Home'
+import Home from '../components/Home'
 import About from '../components/About'
 import MakeupRoutes from '../components/MakeupRoutes'
 import { Route, Switch } from 'react-router-dom'

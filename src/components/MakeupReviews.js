@@ -1,5 +1,5 @@
 import React from 'react';
-import './MakeupItem.css'
+import '../containers/MakeupItem.css'
 
 const MakeupReviews = (props) => (
 

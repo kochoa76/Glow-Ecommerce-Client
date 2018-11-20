@@ -1,7 +1,7 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 import Makeup from '../containers/Makeup'
-import MakeupItem from '../components/MakeupItem'
+import MakeupItem from '../containers/MakeupItem'
 
 class MakeupRoutes extends React.Component {
 

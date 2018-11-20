@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import Main from '../containers/Main'
+import Main from '../components/Main'
 import Header from '../components/Header'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -76,5 +76,5 @@ class App extends React.Component {
         cart: state.cart
       }
     }
-    
+
 export default connect(mapStateToProps)(App)
