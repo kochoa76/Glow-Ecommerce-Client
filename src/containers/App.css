@@ -60,7 +60,7 @@ div.onMouseHover {
   color: black;
   align-items: center;
   margin-bottom: 20px;
-  margin-left: 690px;
+  margin-left: 850px;
 }
 
 .top-round-rainbow {
@@ -82,6 +82,37 @@ background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet
   margin: 30px 30px 10px -50px;
   position: fixed;
 
+}
+
+.about-description {
+  width: 90%;
+  margin: 0 2rem 0 2rem;
+  text-align: center;
+}
+
+h3.about-button {
+  padding: 2rem;
+  text-align: center;
+}
+
+h3.about-button a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+h1.about-title {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-left: 0rem;
+  margin-top: 3rem;
+  padding: 5rem;
+}
+
+.nav-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-links ul {

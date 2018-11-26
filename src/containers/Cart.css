@@ -23,6 +23,17 @@
 
 }
 
+div.Cart {
+  justify-content: center;
+  align-items: center;
+}
+
+div.Order-Summary {
+  justify-content: center;
+  align-items: center;
+
+}
+
 .ItemImage {
   width: 50%;
   display: flex;
@@ -34,7 +45,7 @@
 
 .ItemQuantity {
   margin-left: 430px;
-  margin-top: -82px;
+  margin-top: -90px;
 }
 
 .CartData {
@@ -81,24 +92,26 @@
 
 .minus-icon {
   margin-left: -20px;
-  margin-top: 40px;
+  margin-top: 38px;
+  cursor: pointer;
 }
 
 .minus-icon-cart {
   margin-left: -20px;
-  margin-top: 5px;
+  margin-top: 3px;
   padding-right: 10px;
 }
 
 .plus-icon {
   margin-left: 420px;
-  margin-top: -27px;
-  margin-bottom: 100px
+  margin-top: -19px;
+  margin-bottom: 100px;
+  cursor: pointer;
 }
 
 .plus-icon-cart {
   margin-top: -15px;
-  margin-left: 15px;
+  margin-left: -420px;
 }
 
 .Price, .SubTotal, .Quantity, .Product{
